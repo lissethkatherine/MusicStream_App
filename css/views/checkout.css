@@ -1,0 +1,116 @@
+/* ===========================
+   VIEWS / CHECKOUT.CSS — cart · checkout · success
+   =========================== */
+
+/* ===== SHARED ===== */
+.checkout-page { padding-top: calc(60px + 32px); max-width: 1100px; margin: 0 auto; padding-left: 32px; padding-right: 32px; padding-bottom: 64px; }
+.page-title    { font-size: 36px; font-weight: 900; margin-bottom: 32px; }
+
+.order-summary-actions { margin-top: 32px; }
+.order-divider         { border: none; border-top: 1px solid rgba(255,255,255,.08); margin: 16px 0; }
+
+/* ===== CART ===== */
+.cart-layout { display: grid; grid-template-columns: 1fr 360px; gap: 48px; align-items: start; }
+
+.cart-item         { background: #1a2030; border-radius: 14px; padding: 16px 24px; display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+.cart-item__cover  { width: 72px; height: 72px; border-radius: 10px; overflow: hidden; flex-shrink: 0; }
+.cart-item__cover img { width: 100%; height: 100%; object-fit: cover; }
+.cart-item__info   { flex: 1; min-width: 0; }
+.cart-item__title  { font-size: 15px; font-weight: 700; margin-bottom: 2px; }
+.cart-item__artist { font-size: 13px; color: #8b949e; margin-bottom: 2px; }
+.cart-item__format { font-size: 11px; color: #6e7681; }
+.cart-item__qty    { display: flex; align-items: center; gap: 16px; }
+.qty-btn  { width: 30px; height: 30px; border-radius: 9999px; background: #1c2230; border: 1px solid rgba(255,255,255,.08); color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background .2s ease; }
+.qty-btn:hover { background: #1f2840; }
+.qty-num  { font-size: 15px; font-weight: 600; min-width: 20px; text-align: center; }
+.cart-item__price { font-size: 15px; font-weight: 700; min-width: 70px; text-align: right; }
+.delete-btn       { opacity: 0.4; padding: 8px; border-radius: 6px; cursor: pointer; transition: opacity .2s ease, color .2s ease; }
+.delete-btn:hover { opacity: 1; color: #ef4444; }
+
+.btn--checkout { width: 100%; border-radius: 14px; padding: 14px; }
+.continue-link { display: block; text-align: center; color: #3b82f6; font-size: 13px; font-weight: 500; margin-top: 16px; transition: opacity .2s ease; }
+.continue-link:hover { opacity: 0.8; }
+
+/* ===== CHECKOUT ===== */
+.checkout-layout { display: grid; grid-template-columns: 1fr 360px; gap: 48px; align-items: start; }
+
+.simple-header { background: #161b22; border-bottom: 1px solid rgba(255,255,255,.08); padding: 0 32px; height: 60px; display: flex; align-items: center; justify-content: space-between; position: fixed; top: 0; left: 0; right: 0; z-index: 100; }
+.back-store-link { font-size: 13px; color: #8b949e; transition: color .2s ease; }
+.back-store-link:hover { color: #fff; }
+
+.checkout-section    { background: #1a2030; border-radius: 20px; padding: 32px; border: 1px solid rgba(255,255,255,.08); margin-bottom: 32px; }
+.checkout-section h2 { font-size: 18px; font-weight: 700; margin-bottom: 32px; }
+
+.payment-method-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+.payment-method-header h2 { margin: 0; }
+.payment-subtitle { font-size: 13px; color: #8b949e; margin-bottom: 24px; }
+
+.card-icons { display: flex; gap: 6px; }
+.card-icon  { width: 38px; height: 26px; border-radius: 4px; border: 1px solid rgba(255,255,255,.08); background: #1c2230; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.card-icon--visa::after  { content: 'VISA'; background: #1a1f71; color: white; font-size: 7px; font-weight: 900; font-style: italic; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+.card-icon--mc           { position: relative; }
+.card-icon--mc::before   { content: ''; position: absolute; left: 6px; width: 14px; height: 14px; background: #eb001b; border-radius: 50%; }
+.card-icon--mc::after    { content: ''; position: absolute; right: 6px; width: 14px; height: 14px; background: #f79e1b; border-radius: 50%; }
+.card-icon--amex::after  { content: 'AMEX'; background: #2671b2; color: white; font-size: 6px; font-weight: 700; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+
+.order-small-item  { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+.order-small-cover { width: 44px; height: 44px; border-radius: 6px; overflow: hidden; flex-shrink: 0; }
+.order-small-cover img { width: 100%; height: 100%; object-fit: cover; }
+.order-small-info  { flex: 1; min-width: 0; }
+.order-small-title  { font-size: 13px; font-weight: 600; }
+.order-small-artist { font-size: 11px; color: #8b949e; }
+.order-small-price  { font-size: 13px; font-weight: 700; }
+
+.btn--place-order { width: 100%; border-radius: 14px; padding: 16px; font-size: 15px; }
+.checkout-tos     { font-size: 11px; color: #6e7681; text-align: center; margin-top: 16px; line-height: 1.6; }
+.checkout-tos a   { color: #3b82f6; }
+
+/* ===== SUCCESS ===== */
+.success-layout  { display: flex; min-height: 100vh; padding-top: 60px; }
+
+.my-music-sidebar-wrap { width: 220px; flex-shrink: 0; background: #161b22; border-right: 1px solid rgba(255,255,255,.08); position: fixed; top: 60px; bottom: 0; left: 0; padding: 32px 0; }
+.my-music-label  { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #6e7681; padding: 0 24px; margin-bottom: 16px; }
+.my-music-link   { display: flex; align-items: center; gap: 16px; padding: 12px 24px; font-size: 13px; color: #8b949e; transition: color .2s ease, background .2s ease; }
+.my-music-link:hover { color: #fff; background: rgba(255,255,255,0.04); }
+.my-music-link img   { opacity: 0.5; }
+
+.success-content { flex: 1; margin-left: 220px; display: flex; align-items: center; justify-content: center; padding: 48px; }
+.success-card    { background: #1a2030; border-radius: 20px; padding: 64px 48px; max-width: 680px; width: 100%; text-align: center; border: 1px solid rgba(255,255,255,.08); }
+
+.success-icon-wrap { width: 72px; height: 72px; background: rgba(34,197,94,.15); border-radius: 9999px; display: flex; align-items: center; justify-content: center; margin: 0 auto 32px; }
+.success-check     { filter: invert(57%) sepia(88%) saturate(419%) hue-rotate(95deg) brightness(95%) contrast(92%); }
+
+.success-title    { font-size: 36px; font-weight: 900; margin-bottom: 16px; }
+.success-subtitle { font-size: 13px; color: #8b949e; line-height: 1.7; max-width: 420px; margin: 0 auto 48px; }
+
+.success-order-box   { background: #1c2230; border-radius: 20px; padding: 32px; text-align: left; margin-bottom: 32px; }
+.success-order-title { font-size: 15px; font-weight: 700; margin-bottom: 24px; }
+.success-order-item  { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+.success-item-thumb  { width: 60px; height: 60px; border-radius: 9999px; overflow: hidden; flex-shrink: 0; }
+.success-item-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.success-item-info   { flex: 1; }
+.success-item-title  { font-size: 15px; font-weight: 700; }
+.success-item-artist { font-size: 13px; color: #8b949e; }
+.success-item-price  { font-size: 15px; font-weight: 700; }
+.success-divider     { border: none; border-top: 1px solid rgba(255,255,255,.08); margin: 24px 0; }
+
+.success-meta-row    { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 8px; }
+.success-meta-label  { color: #6e7681; }
+.success-meta-value  { color: #8b949e; font-weight: 500; }
+.success-meta-value--total { color: #fff; font-size: 18px; font-weight: 800; }
+
+.success-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.btn--dark       { background: #1c2230; color: #fff; border: 1px solid rgba(255,255,255,.08); padding: 14px 32px; border-radius: 9999px; font-size: 13px; font-weight: 600; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background .2s ease; }
+.btn--dark:hover { background: #1f2840; }
+.btn--return     { border-radius: 9999px; padding: 14px 32px; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .cart-layout     { grid-template-columns: 1fr; }
+  .checkout-layout { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .my-music-sidebar-wrap { display: none; }
+  .success-content       { margin-left: 0; }
+  .success-actions       { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/*RESET*/
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+
+/*BASE*/
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  background-color: #0d1117;
+  color: #fff;
+  line-height: 1.5;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img     { display: block; max-width: 100%; height: auto; }
+a       { text-decoration: none; color: inherit; }
+button  { cursor: pointer; border: none; background: none; font-family: 'Inter',-apple-system,BlinkMacSystemFont,sans-serif; }
+input, select, textarea { font-family: 'Inter',-apple-system,BlinkMacSystemFont,sans-serif; }
+ul, ol  { list-style: none; }
+
+/*SCROLLBAR*/
+::-webkit-scrollbar       { width: 6px; }
+::-webkit-scrollbar-track { background: #0d1117; }
+::-webkit-scrollbar-thumb { background: #131312b2; border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover { background: #6e7681; }
+
+/*ICON SIZES*/
+.search-bar img, .active-pill img, .player-bar__volume img,
+.btn--wishlist img, .btn--share img, .tracklist th img,
+.volume-icon, .expand-btn img                          { width: 14px; height: 14px; }
+.icon-btn img                                          { width: 15px; height: 15px; }
+.ctrl-btn img, .delete-btn img,
+.btn img, .my-music-link img, .input-icon img          { width: 16px; height: 16px; }
+.sidebar-nav img                                       { width: 20px; height: 20px; }
+.ctrl-btn.prev img, .ctrl-btn.next img, .p-ctrl img    { width: 18px; height: 18px; }
+.p-ctrl.prev img, .p-ctrl.next img                    { width: 20px; height: 20px; }
+.logo img, .player-heart-btn img                       { width: 22px; height: 22px; }
+.success-check                                         { width: 36px; height: 36px; }
+.search-bar img                                        { flex-shrink: 0; }
+.input-icon img                                        { display: block; }

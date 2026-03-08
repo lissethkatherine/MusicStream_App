@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MusicStream - Store</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/views/store.css">
+</head>
+<body>
+
+  <header class="site-header site-header--left">
+    <a href="index.html" class="logo">
+      <img src="assets/icons/logo.svg" alt="MusicStream">
+      MusicStream
+    </a>
+    <nav class="header-nav">
+      <a href="#">Discover</a>
+      <a href="#">Library</a>
+      <a href="index.html" class="active header-nav-underline">Store</a>
+    </nav>
+    <div class="header-actions">
+      <div class="search-bar">
+        <img src="assets/icons/search.svg" alt="">
+        <input type="text" placeholder="Artists, albums, tracks">
+      </div>
+      <div class="avatar">
+        <img src="assets/img/avatar.jpg" alt="Profile">
+      </div>
+    </div>
+  </header>
+
+  <div class="page-layout">
+
+    <aside class="sidebar">
+      <p class="sidebar-label">Categories</p>
+      <nav class="sidebar-nav">
+        <a href="#" class="active">
+          <span class="active-pill">
+            <img src="assets/icons/new-releases.svg" alt="">
+          </span>
+          New Releases
+        </a>
+        <a href="#">
+          <img src="assets/icons/genres.svg" alt="">
+          Genres
+        </a>
+        <a href="#">
+          <img src="assets/icons/top-charts.svg" alt="">
+          Top Charts
+        </a>
+        <a href="#">
+          <img src="assets/icons/artists.svg" alt="">
+          Artists
+        </a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+
+      <section class="hero-banner">
+        <img src="assets/img/hero-solar.jpg" alt="Solar Flare" class="hero-bg">
+        <div class="hero-content">
+          <p class="hero-eyebrow">Editor's Pick</p>
+          <h1 class="hero-title">The new album from Solar Flare</h1>
+          <a href="album-detail.html" class="hero-btn">Buy Now - $14.99</a>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="section-header">
+          <h2 class="section-title">New Albums This Week</h2>
+        </div>
+        <div class="album-grid">
+
+          <a href="album-detail.html" class="album-card">
+            <div class="album-card__cover cover--echoes">
+              <img src="assets/img/album-morat-YAEM.jpg" alt="Echoes in Time">
+            </div>
+            <div class="album-card__info">
+              <div class="album-card__title">Ya Es Mañana</div>
+              <div class="album-card__artist">The Wanderers</div>
+              <button class="album-card__price">$9.99</button>
+            </div>
+          </a>
+
+          <a href="album-detail.html" class="album-card">
+            <div class="album-card__cover cover--midnight">
+              <img src="assets/img/album-moratADQA.jpg" alt="Midnight Drive">
+            </div>
+            <div class="album-card__info">
+              <div class="album-card__title">ADQA</div>
+              <div class="album-card__artist">Morat</div>
+              <button class="album-card__price">$12.99</button>
+            </div>
+          </a>
+
+          <a href="album-detail.html" class="album-card">
+            <div class="album-card__cover cover--city">
+              <img src="assets/img/album-morat-b.jpg" alt="City Lights">
+            </div>
+            <div class="album-card__info">
+              <div class="album-card__title">Balas perdidas</div>
+              <div class="album-card__artist">Morat</div>
+              <button class="album-card__price">$9.99</button>
+            </div>
+          </a>
+
+          <a href="#" class="album-card">
+            <div class="album-card__cover cover--lost">
+              <img src="assets/img/album-morat-a.jpg" alt="Lost in Sound">
+            </div>
+            <div class="album-card__info">
+              <div class="album-card__title">¿A dónde vamos?</div>
+              <div class="album-card__artist">Morat</div>
+              <button class="album-card__price">$7.99</button>
+            </div>
+          </a>
+
+          <a href="#" class="album-card">
+            <div class="album-card__cover cover--retro">
+              <img src="assets/img/album-morat-t.jpg" alt="Retrog">
+            </div>
+            <div class="album-card__info">
+              <div class="album-card__title">Tú Carcel</div>
+              <div class="album-card__artist">Morat</div>
+              <button class="album-card__price">$8.99</button>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="section-header">
+          <h2 class="section-title">Top Selling Tracks</h2>
+        </div>
+        <div class="track-grid">
+
+          <a href="player.html" class="track-card">
+            <div class="track-card__cover cover--starlight">
+              <img src="assets/img/track-starlight.jpg" alt="Starlight">
+            </div>
+            <div class="track-card__info">
+              <div class="track-card__title">Cuando nadie ve</div>
+              <div class="track-card__artist">Morat</div>
+              <button class="track-card__price">$1.29</button>
+            </div>
+          </a>
+
+          <a href="player.html" class="track-card">
+            <div class="track-card__cover cover--ocean">
+              <img src="assets/img/track-ocean.jpg" alt="Ocean Deep">
+            </div>
+            <div class="track-card__info">
+              <div class="track-card__title">No se va</div>
+              <div class="track-card__artist">Morat</div>
+              <button class="track-card__price">$1.29</button>
+            </div>
+          </a>
+
+          <a href="player.html" class="track-card">
+            <div class="track-card__cover cover--firefly">
+              <img src="assets/img/track-firefly.jpg" alt="Firefly">
+            </div>
+            <div class="track-card__info">
+              <div class="track-card__title">Amor con hielo</div>
+              <div class="track-card__artist">Morat</div>
+              <button class="track-card__price">$0.99</button>
+            </div>
+          </a>
+          <a href="#" class="track-card">
+            <div class="track-card__cover cover--rush">
+              <img src="assets/img/track-rush.jpg" alt="Rush Hour">
+            </div>
+            <div class="track-card__info">
+              <div class="track-card__title">Aprender a querete</div>
+              <div class="track-card__artist">Morat</div>
+              <button class="track-card__price">$1.29</button>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
