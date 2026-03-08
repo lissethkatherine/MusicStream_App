@@ -1,15 +1,13 @@
-/* ===========================
-   VIEWS / CHECKOUT.CSS — cart · checkout · success
-   =========================== */
+/*VIEWS / CHECKOUT.CSS — cart · checkout · success*/
 
-/* ===== SHARED ===== */
+/*SHARED*/
 .checkout-page { padding-top: calc(60px + 32px); max-width: 1100px; margin: 0 auto; padding-left: 32px; padding-right: 32px; padding-bottom: 64px; }
 .page-title    { font-size: 36px; font-weight: 900; margin-bottom: 32px; }
 
 .order-summary-actions { margin-top: 32px; }
 .order-divider         { border: none; border-top: 1px solid rgba(255,255,255,.08); margin: 16px 0; }
 
-/* ===== CART ===== */
+/*CART*/
 .cart-layout { display: grid; grid-template-columns: 1fr 360px; gap: 48px; align-items: start; }
 
 .cart-item         { background: #1a2030; border-radius: 14px; padding: 16px 24px; display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
@@ -31,7 +29,7 @@
 .continue-link { display: block; text-align: center; color: #3b82f6; font-size: 13px; font-weight: 500; margin-top: 16px; transition: opacity .2s ease; }
 .continue-link:hover { opacity: 0.8; }
 
-/* ===== CHECKOUT ===== */
+/*CHECKOUT*/
 .checkout-layout { display: grid; grid-template-columns: 1fr 360px; gap: 48px; align-items: start; }
 
 .simple-header { background: #161b22; border-bottom: 1px solid rgba(255,255,255,.08); padding: 0 32px; height: 60px; display: flex; align-items: center; justify-content: space-between; position: fixed; top: 0; left: 0; right: 0; z-index: 100; }
@@ -65,7 +63,7 @@
 .checkout-tos     { font-size: 11px; color: #6e7681; text-align: center; margin-top: 16px; line-height: 1.6; }
 .checkout-tos a   { color: #3b82f6; }
 
-/* ===== SUCCESS ===== */
+/*SUCCESS*/
 .success-layout  { display: flex; min-height: 100vh; padding-top: 60px; }
 
 .my-music-sidebar-wrap { width: 220px; flex-shrink: 0; background: #161b22; border-right: 1px solid rgba(255,255,255,.08); position: fixed; top: 60px; bottom: 0; left: 0; padding: 32px 0; }
@@ -104,7 +102,7 @@
 .btn--dark:hover { background: #1f2840; }
 .btn--return     { border-radius: 9999px; padding: 14px 32px; }
 
-/* ===== RESPONSIVE ===== */
+/*RESPONSIVE*/
 @media (max-width: 900px) {
   .cart-layout     { grid-template-columns: 1fr; }
   .checkout-layout { grid-template-columns: 1fr; }

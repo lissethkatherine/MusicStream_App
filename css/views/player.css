@@ -48,7 +48,7 @@ body { overflow: hidden; }
 .expand-btn      { background: none; border: none; cursor: pointer; opacity: 0.5; transition: opacity .2s ease; }
 .expand-btn:hover { opacity: 1; }
 
-/* Barra de progreso encima del bottom bar - de lado a lado */
+/*Barra de progreso encima del bottom bar*/
 .player-bottom-progress { position: fixed; bottom: 72px; left: 0; right: 0; z-index: 200; height: 4px; overflow: hidden; background: rgba(255,255,255,0.15); }
 .player-bottom-progress .progress { height: 4px; width: 34%; background: #3b82f6; transition: width .1s linear; }
 

@@ -1,4 +1,4 @@
-/* ===== ALBUM DETAIL LAYOUT ===== */
+/*ALBUM DETAIL LAYOUT*/
 .album-detail-layout { display: grid; grid-template-columns: 380px 1fr; gap: 64px; align-items: start; }
 
 .album-detail-left { position: sticky; top: calc(60px + 32px); }
