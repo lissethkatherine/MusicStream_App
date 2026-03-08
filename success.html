@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Purchase Successful - MusicStream</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/views/checkout.css">
+</head>
+<body>
+
+  <header class="site-header site-header--centered">
+    <a href="index.html" class="logo">
+      <img src="assets/icons/logo.svg" alt="MusicStream">
+      MusicStream
+    </a>
+    <nav class="header-nav">
+      <a href="#">Discover</a>
+      <a href="#">Library</a>
+      <a href="index.html">Store</a>
+    </nav>
+    <div class="header-actions">
+      <div class="search-bar search-bar--narrow">
+        <img src="assets/icons/search.svg" alt="">
+        <input type="text" placeholder="Artists, albums, tracks">
+      </div>
+      <div class="avatar">
+        <img src="assets/img/avatar.jpg" alt="Profile">
+      </div>
+    </div>
+  </header>
+
+  <div class="success-layout">
+
+    <aside class="my-music-sidebar-wrap">
+      <p class="my-music-label">My Music</p>
+      <a href="#" class="my-music-link">
+        <img src="assets/icons/recently-purchased.svg" alt="">
+        Recently Purchased
+      </a>
+      <a href="#" class="my-music-link">
+        <img src="assets/icons/my-albums.svg" alt="">
+        My Albums
+      </a>
+      <a href="#" class="my-music-link">
+        <img src="assets/icons/heart.svg" alt="">
+        Liked Songs
+      </a>
+    </aside>
+
+    <div class="success-content">
+      <div class="success-card">
+
+        <div class="success-icon-wrap">
+          <img src="assets/icons/check-circle.svg" alt="Success" class="success-check">
+        </div>
+
+        <h1 class="success-title">Purchase Successful!</h1>
+        <p class="success-subtitle">Thank you for your purchase. A confirmation email has been sent to your registered address. You can now find your new music in your library.</p>
+
+        <div class="success-order-box">
+          <h3 class="success-order-title">Order Summary</h3>
+          <div class="success-order-item">
+            <div class="success-item-thumb cover--solar">
+              <img src="assets/img/hero-solar.jpg" alt="Solar Flare">
+            </div>
+            <div class="success-item-info">
+              <div class="success-item-title">Solar Flare</div>
+              <div class="success-item-artist">The Wanderers</div>
+            </div>
+            <div class="success-item-price">$14.99</div>
+          </div>
+          <hr class="success-divider">
+          <div class="success-meta-row">
+            <span class="success-meta-label">Total:</span>
+            <span class="success-meta-value success-meta-value--total">$14.99</span>
+          </div>
+          <div class="success-meta-row">
+            <span class="success-meta-label">Order ID:</span>
+            <span class="success-meta-value">#ABC - 123 - XYZ - 456</span>
+          </div>
+        </div>
+
+        <div class="success-actions">
+          <button class="btn--dark">View Order History</button>
+          <a href="index.html" class="btn btn--primary btn--return">Return to Store</a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
