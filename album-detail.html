@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cosmic Echoes - MusicStream</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/views/album.css">
+</head>
+<body>
+  <header class="site-header site-header--centered">
+    <a href="index.html" class="logo">
+      <img src="assets/icons/logo.svg" alt="MusicStream">
+      MusicStream
+    </a>
+    <div class="search-bar search-bar--narrow">
+      <img src="assets/icons/search.svg" alt="">
+      <input type="text" placeholder="Search artists, albums...">
+    </div>
+    <nav class="header-nav">
+      <a href="index.html">Home</a>
+      <a href="#">Browse</a>
+      <a href="#" class="active">Library</a>
+    </nav>
+    <div class="header-actions">
+      <a href="cart.html" class="icon-btn">
+        <img src="assets/icons/cart.svg" alt="Cart">
+      </a>
+      <div class="icon-btn notif-btn">
+        <img src="assets/icons/bell.svg" alt="Notifications">
+      </div>
+      <div class="avatar">
+        <img src="assets/img/avatar.jpg" alt="Profile">
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content main-content--no-sidebar main-content--padded">
+    <nav class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <a href="#">Artist</a>
+      <span>/</span>
+      <span class="current">Cosmic Echoes</span>
+    </nav>
+
+    <div class="album-detail-layout">
+
+      <div class="album-detail-left">
+        <div class="album-cover-large cover--cosmic">
+          <img src="assets/img/album-MORAT.jpg" alt="Cosmic Echoes">
+        </div>
+        <h1 class="album-title">Si ayer fuera hoy</h1>
+        <div class="album-meta">
+          <span>Morat</span>
+          <span class="dot">•</span>
+          <span>2023</span>
+          <span class="dot">•</span>
+          <span>Pop Latino / Indie</span>
+        </div>
+        <div class="album-actions">
+          <a href="cart.html" class="btn btn--primary btn--large">Add Album to Cart - $9.99</a>
+          <div class="album-actions-secondary">
+            <button class="btn--wishlist">
+              <img src="assets/icons/heart.svg" alt="">
+              Wishlist
+            </button>
+            <button class="btn--share">
+              <img src="assets/icons/share.svg" alt="">
+              Share
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="album-detail-right">
+
+        <div class="tracklist-section">
+          <h2 class="tracklist-title">Tracklist</h2>
+          <table class="tracklist">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Title</th>
+                <th>Artist</th>
+                <th><img src="assets/icons/clock.svg" alt="Duration"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td class="track-name">Segundos platos</td>
+                <td class="track-artist">Morat</td>
+                <td>3:45</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td class="track-name">Debí suponerlo</td>
+                <td class="track-artist">Morat</td>
+                <td>4:12</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td class="track-name">Salir con vida</td>
+                <td class="track-artist">Morat</td>
+                <td>3:58</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td class="track-name">506</td>
+                <td class="track-artist">Morat, feat. Juanes</td>
+                <td>5:01</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <nav class="tabs">
+          <button class="tab-btn active">About the Artist</button>
+          <button class="tab-btn">Reviews</button>
+          <button class="tab-btn">Credits</button>
+        </nav>
+        <div class="tab-content">
+          <p>Morat is a Colombian indie pop band formed in Bogotá in 2010,
+comprised of Juan Pablo Isaza, Juan Pablo Villamil, Martín Vargas, and
+Simón Vargas. Known for their emotive lyrics and acoustic sound,
+they became one of the most listened-to Latin groups of their
+generation. "Si Ayer Fuera Hoy" is their most recent album, a
+collection of songs that explore love, nostalgia, and the passage
+of time with their characteristic sensitivity.</p>
+          <br>
+          <a href="#">Read more on their page →</a>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <div class="player-bar">
+    <div class="player-bar__track">
+      <div class="player-bar__thumb cover--cosmic">
+        <img src="assets/img/album-cosmic.jpg" alt="Starlight Serenade">
+      </div>
+      <div class="player-bar__info">
+        <div class="player-bar__title">Si ayer fuera hoy</div>
+        <div class="player-bar__artist">Morat</div>
+      </div>
+    </div>
+    <div class="player-bar__controls">
+      <div class="player-bar__buttons">
+        <a href="player.html">
+          <button class="ctrl-btn">
+            <img src="assets/icons/shuffle.svg" alt="Shuffle">
+          </button>
+        </a>
+        <button class="ctrl-btn">
+          <img src="assets/icons/prev.svg" alt="Previous">
+        </button>
+        <button class="ctrl-btn ctrl-btn--play">
+          <img src="assets/icons/pause.svg" alt="Pause">
+        </button>
+        <button class="ctrl-btn">
+          <img src="assets/icons/next.svg" alt="Next">
+        </button>
+        <button class="ctrl-btn">
+          <img src="assets/icons/repeat.svg" alt="Repeat">
+        </button>
+      </div>
+      <div class="player-bar__progress">
+        <span class="time-label">1:23</span>
+        <div class="progress-bar">
+          <div class="progress-bar__fill progress-bar__fill--35"></div>
+        </div>
+        <span class="time-label">3:45</span>
+      </div>
+    </div>
+    <div class="player-bar__volume">
+      <img src="assets/icons/volume.svg" alt="Volume" class="volume-icon">
+      <div class="volume-bar">
+        <div class="volume-bar__fill"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
