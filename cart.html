@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart - MusicStream</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/views/checkout.css">
+</head>
+<body>
+
+  <header class="site-header site-header--centered">
+    <a href="index.html" class="logo">
+      <img src="assets/icons/logo.svg" alt="MusicStream">
+      MusicStream
+    </a>
+    <nav class="header-nav">
+      <a href="index.html">Home</a>
+      <a href="#">Discover</a>
+      <a href="#">Library</a>
+      <a href="index.html" class="active">Store</a>
+    </nav>
+    <div class="header-actions">
+      <a href="cart.html" class="icon-btn icon-btn--blue">
+        <img src="assets/icons/cart.svg" alt="Cart">
+      </a>
+      <div class="avatar">
+        <img src="assets/img/avatar.jpg" alt="Profile">
+      </div>
+    </div>
+  </header>
+
+  <div class="checkout-page">
+
+    <nav class="breadcrumb">
+      <a href="index.html">Store</a>
+      <span>/</span>
+      <span class="current">Your Cart</span>
+    </nav>
+
+    <h1 class="page-title">Your Cart</h1>
+    <div class="cart-layout">
+      <div class="cart-items">
+        <div class="cart-item">
+          <div class="cart-item__cover cover--currents">
+            <img src="assets/img/album-currents.jpg" alt="Currents">
+          </div>
+          <div class="cart-item__info">
+            <div class="cart-item__title">Currents</div>
+            <div class="cart-item__artist">Tame Impala</div>
+            <div class="cart-item__format">FLAC</div>
+          </div>
+          <div class="cart-item__qty">
+            <button class="qty-btn">−</button>
+            <span class="qty-num">1</span>
+            <button class="qty-btn">+</button>
+          </div>
+          <div class="cart-item__price">$12.99</div>
+          <button class="delete-btn">
+            <img src="assets/icons/trash.svg" alt="Remove">
+          </button>
+        </div>
+        <div class="cart-item">
+          <div class="cart-item__cover cover--blonde">
+            <img src="assets/img/album-blonde.jpg" alt="Blonde">
+          </div>
+          <div class="cart-item__info">
+            <div class="cart-item__title">Blonde</div>
+            <div class="cart-item__artist">Frank Ocean</div>
+            <div class="cart-item__format">Digital MP3</div>
+          </div>
+          <div class="cart-item__qty">
+            <button class="qty-btn">−</button>
+            <span class="qty-num">1</span>
+            <button class="qty-btn">+</button>
+          </div>
+          <div class="cart-item__price">$9.99</div>
+          <button class="delete-btn">
+            <img src="assets/icons/trash.svg" alt="Remove">
+          </button>
+        </div>
+      </div>
+
+      <div class="order-summary-card">
+        <h3>Order Summary</h3>
+        <div class="order-line">
+          <span class="order-line__label">Subtotal</span>
+          <span class="order-line__value">$22.98</span>
+        </div>
+        <div class="order-line">
+          <span class="order-line__label">Estimated Tax</span>
+          <span class="order-line__value">$1.84</span>
+        </div>
+        <div class="order-line order-line--total">
+          <span class="order-line__label">Total</span>
+          <span class="order-line__value">$24.82</span>
+        </div>
+        <div class="order-summary-actions">
+          <a href="checkout.html" class="btn btn--primary btn--checkout">
+            <img src="assets/icons/lock.svg" alt="">
+            Proceed to Checkout
+          </a>
+          <a href="index.html" class="continue-link">Continue Shopping</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
