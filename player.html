@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Now Playing - MusicStream</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/views/player.css">
+</head>
+<body>
+
+  <header class="site-header site-header--centered">
+    <a href="index.html" class="logo">
+      <img src="assets/icons/logo.svg" alt="MusicStream">
+      MusicStream
+    </a>
+    <div class="search-bar search-bar--narrow">
+      <img src="assets/icons/search.svg" alt="">
+      <input type="text" placeholder="Search">
+    </div>
+    <nav class="header-nav">
+      <a href="index.html">Home</a>
+      <a href="#">Browse</a>
+      <a href="#">Library</a>
+      <a href="index.html">Store</a>
+    </nav>
+    <div class="header-actions">
+      <div class="icon-btn notif-btn">
+        <img src="assets/icons/bell.svg" alt="Notifications">
+        <span class="notif-badge"></span>
+      </div>
+      <div class="avatar">
+        <img src="assets/img/avatar2.jpg" alt="Profile">
+      </div>
+    </div>
+  </header>
+
+  <audio id="player-audio" src="assets/mp3/Como_te_atreves.mp3"></audio>
+
+  <div class="player-page">
+
+    <div class="player-main">
+
+      <div class="player-artwork-wrap">
+        <div class="player-artwork cover--void">
+          <img src="assets/img/album-void.jpg" alt="Echoes in the Void">
+        </div>
+      </div>
+
+      <div class="player-track-info">
+        <h1 class="player-track-title">Cómo te atreves</h1>
+        <button class="player-heart-btn">
+          <img src="assets/icons/heart.svg" alt="Like">
+        </button>
+      </div>
+
+      <p class="player-artist">Morat</p>
+      <p class="player-album">Cómo te atreves</p>
+
+      <a href="cart.html" class="btn btn--primary btn--buy-track">Buy Track - $1.29</a>
+
+    </div>
+
+    <aside class="player-sidebar">
+      <h2 class="up-next-title">Up Next</h2>
+
+      <div class="up-next-item">
+        <div class="up-next-item__thumb cover--neon">
+          <img src="assets/img/mi-nuevo-vicio.jpg" alt="Neon Dreams">
+        </div>
+        <div class="up-next-item__info">
+          <div class="up-next-item__title">Mi nuevo vicio</div>
+          <div class="up-next-item__artist">Morat</div>
+        </div>
+        <span class="up-next-item__duration">3:58</span>
+      </div>
+
+      <div class="up-next-item">
+        <div class="up-next-item__thumb cover--translation">
+          <img src="assets/img/un-dia.jpg" alt="Lost in Translation">
+        </div>
+        <div class="up-next-item__info">
+          <div class="up-next-item__title">En un solo día</div>
+          <div class="up-next-item__artist">Morat</div>
+        </div>
+        <span class="up-next-item__duration">3:23</span>
+      </div>
+
+      <div class="up-next-item">
+        <div class="up-next-item__thumb cover--city2">
+          <img src="assets/img/aprender-a-quererte.jpg" alt="City Lights">
+        </div>
+        <div class="up-next-item__info">
+          <div class="up-next-item__title">Aprender a quererte</div>
+          <div class="up-next-item__artist">Morat</div>
+        </div>
+        <span class="up-next-item__duration">2:58</span>
+      </div>
+
+    </aside>
+  </div>
+
+  <div class="player-bottom-bar">
+    <div class="player-bottom-progress">
+      <div class="progress" id="main-progress"></div>
+    </div>
+    <div class="player-mini-info">
+      <div class="player-mini-thumb cover--void">
+        <img src="assets/img/album-void.jpg" alt="Current track">
+      </div>
+      <div class="player-mini-text">
+        <span class="player-mini-title">Cómo te atreves</span>
+        <span class="player-mini-artist">Morat</span>
+      </div>
+    </div>
+
+    <div class="player-mini-center">
+      <div class="player-mini-controls">
+        <button class="p-ctrl">
+          <img src="assets/icons/shuffle.svg" alt="Shuffle">
+        </button>
+        <button class="p-ctrl">
+          <img src="assets/icons/prev.svg" alt="Prev">
+        </button>
+        <button class="p-ctrl p-ctrl--play">
+          <img src="assets/icons/pause.svg" alt="Pause">
+        </button>
+        <button class="p-ctrl">
+          <img src="assets/icons/next.svg" alt="Next">
+        </button>
+        <button class="p-ctrl">
+          <img src="assets/icons/repeat.svg" alt="Repeat">
+        </button>
+      </div>
+    </div>
+
+    <div class="player-mini-vol">
+      <img src="assets/icons/volume.svg" alt="Volume" class="volume-icon">
+      <div class="mini-vol-bar">
+        <div class="mini-vol-fill"></div>
+      </div>
+      <button class="expand-btn">
+        <img src="assets/icons/expand.svg" alt="Expand">
+      </button>
+    </div>
+  </div>
+
+<script>
+  const audio = document.getElementById('player-audio');
+  const playBtns = document.querySelectorAll('.p-ctrl--play');
+  const mainProgress = document.getElementById('main-progress');
+  const progressBar = document.querySelector('.progress-bar');
+
+  // Mover barra mientras suena
+  audio.addEventListener('timeupdate', () => {
+    const pct = (audio.currentTime / audio.duration) * 100;
+    if (mainProgress) mainProgress.style.width = pct + '%';
+  });
+
+  // Click en la barra para saltar
+  if (progressBar) {
+    progressBar.addEventListener('click', (e) => {
+      const rect = progressBar.getBoundingClientRect();
+      const pct = (e.clientX - rect.left) / rect.width;
+      audio.currentTime = pct * audio.duration;
+    });
+  }
+
+  // Botones play/pause
+  playBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
+        playBtns.forEach(b => b.querySelector('img').src = 'assets/icons/pause.svg');
+      } else {
+        audio.pause();
+        playBtns.forEach(b => b.querySelector('img').src = 'assets/icons/play.svg');
+      }
+    });
+  });
+</script>
+</body>
+</html>
