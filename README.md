@@ -55,4 +55,4 @@ python -m http.server 8080
 Luego entrar a `http://localhost:8080`.
 
 ## Tecnologías
-- HTML5 / CSS3 sin frameworks
+- HTML5 / CSS3 
