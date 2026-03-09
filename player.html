@@ -153,13 +153,13 @@
   const mainProgress = document.getElementById('main-progress');
   const progressBar = document.querySelector('.progress-bar');
 
-  // Mover barra mientras suena
+  //Mover barra mientras suena
   audio.addEventListener('timeupdate', () => {
     const pct = (audio.currentTime / audio.duration) * 100;
     if (mainProgress) mainProgress.style.width = pct + '%';
   });
 
-  // Click en la barra para saltar
+  //Click en la barra para saltar
   if (progressBar) {
     progressBar.addEventListener('click', (e) => {
       const rect = progressBar.getBoundingClientRect();
@@ -168,7 +168,7 @@
     });
   }
 
-  // Botones play/pause
+  //Botones play/pause
   playBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       if (audio.paused) {
