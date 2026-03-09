@@ -1,10 +1,12 @@
-/*LAYOUT.CSS — Header · Sidebar · Player bar*/
+/* ===========================
+   LAYOUT.CSS — Header · Sidebar · Player bar
+   =========================== */
 
-/* HEADER*/
+/* ===== HEADER ===== */
 .site-header {
   position: fixed; top: 0; left: 0; right: 0;
   height: 60px;
-  background: #161b22;
+  background: #0d1117;
   border-bottom: 1px solid rgba(255,255,255,.08);
   display: flex; align-items: center;
   padding: 0 24px;
@@ -64,16 +66,15 @@
 }
 .avatar img { width: 100%; height: 100%; object-fit: cover; }
 
-/*PAGE LAYOUT*/
+/* ===== PAGE LAYOUT ===== */
 .page-layout { display: flex; min-height: 100vh; padding-top: 60px; }
 
-/*SIDEBAR*/
+/* ===== SIDEBAR ===== */
 .sidebar {
   width: 240px; flex-shrink: 0;
-  background: #0d1117;
+  background: #0d1117; border-right: 1px solid rgba(255,255,255,.08);
   padding: 32px 0;
   position: fixed; top: 60px; bottom: 0; left: 0;
-  overflow-y: auto;
 }
 .sidebar-label { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #6e7681; padding: 0 28px 16px; }
 .sidebar-nav { display: flex; flex-direction: column; gap: 2px; }
@@ -92,7 +93,7 @@
 .active-pill { background: #3b82f6; width: 40px; height: 40px; border-radius: 9999px; display: flex; align-items: center; justify-content: center; }
 .active-pill img { opacity: 1; filter: brightness(0) invert(1); }
 
-/*MAIN CONTENT*/
+/* ===== MAIN CONTENT ===== */
 .main-content {
   flex: 1; margin-left: 240px;
   padding: 32px;
@@ -102,17 +103,17 @@
 .main-content--no-sidebar { margin-left: 0; }
 .main-content--padded     { padding-top: calc(60px + 32px); }
 
-/*BREADCRUMB*/
+/* ===== BREADCRUMB ===== */
 .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #6e7681; margin-bottom: 24px; }
 .breadcrumb a        { color: #6e7681; transition: color .2s ease; }
 .breadcrumb a:hover  { color: #fff; }
 .breadcrumb .current { color: #fff; }
 
-/*SECTION HEADERS*/
+/* ===== SECTION HEADERS ===== */
 .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
 .section-title  { font-size: 18px; font-weight: 700; }
 
-/*PLAYER BAR*/
+/* ===== PLAYER BAR ===== */
 .player-bar {
   position: fixed; bottom: 0; left: 0; right: 0;
   height: 72px;
@@ -149,8 +150,17 @@
 .volume-bar   { width: 80px; height: 3px; background: rgba(255,255,255,0.15); border-radius: 9999px; cursor: pointer; }
 .volume-bar__fill { height: 100%; width: 65%; background: #3b82f6; border-radius: 9999px; }
 
-/*RESPONSIVE*/
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .sidebar      { display: none; }
   .main-content { margin-left: 0; }
+}
+
+@media (max-width: 600px) {
+  .site-header { padding: 0 16px; gap: 8px; }
+  .header-nav  { display: none; }
+  .search-bar  { display: none; }
+  .logo        { font-size: 14px; }
+  .player-bar__controls { display: none; }
+  .player-bar__volume   { display: none; }
 }

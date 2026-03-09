@@ -1,4 +1,4 @@
-/*ALBUM DETAIL LAYOUT*/
+/* ===== ALBUM DETAIL LAYOUT ===== */
 .album-detail-layout { display: grid; grid-template-columns: 380px 1fr; gap: 64px; align-items: start; }
 
 .album-detail-left { position: sticky; top: calc(60px + 32px); }
@@ -31,4 +31,10 @@
 @media (max-width: 900px) {
   .album-detail-layout { grid-template-columns: 1fr; }
   .album-detail-left   { position: static; }
+}
+
+@media (max-width: 600px) {
+  .album-title        { font-size: 22px; }
+  .tracklist th, .tracklist td { font-size: 12px; padding: 8px 4px; }
+  .album-cover-large  { width: 100%; }
 }

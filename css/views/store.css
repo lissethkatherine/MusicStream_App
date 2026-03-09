@@ -18,3 +18,15 @@
 /*Nav active underline*/
 .header-nav-underline { position: relative; }
 .header-nav-underline::after { content: ''; position: absolute; bottom: -20px; left: 0; right: 0; height: 2px; background: #fff; }
+
+@media (max-width: 900px) {
+  .album-grid { grid-template-columns: repeat(3, 1fr); }
+  .track-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .album-grid { grid-template-columns: repeat(2, 1fr); }
+  .track-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero-title  { font-size: 20px; }
+  .hero-btn    { font-size: 13px; padding: 10px 20px; }
+}
