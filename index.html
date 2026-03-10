@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,8 +29,28 @@
       <div class="avatar">
         <img src="assets/img/avatar.jpg" alt="Profile">
       </div>
+      <button class="hamburger-btn" id="hamburgerBtn">&#9776;</button>
     </div>
   </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-search">
+      <img src="assets/icons/search.svg" alt="">
+      <input type="text" placeholder="Artists, albums, tracks">
+    </div>
+    <nav class="mobile-nav">
+      <a href="#">Discover</a>
+      <a href="#">Library</a>
+      <a href="index.html" class="active">Store</a>
+    </nav>
+    <p class="mobile-menu-label">Categories</p>
+    <nav class="mobile-categories">
+      <a href="#">New Releases</a>
+      <a href="#">Genres</a>
+      <a href="#">Top Charts</a>
+      <a href="#">Artists</a>
+    </nav>
+  </div>
 
   <div class="page-layout">
 
@@ -143,8 +163,8 @@
               <img src="assets/img/track-starlight.jpg" alt="Starlight">
             </div>
             <div class="track-card__info">
-              <div class="track-card__title">Cuando nadie ve</div>
-              <div class="track-card__artist">Morat</div>
+              <div class="track-card__title">Starlight</div>
+              <div class="track-card__artist">Cosmic Echo</div>
               <button class="track-card__price">$1.29</button>
             </div>
           </a>
@@ -154,8 +174,8 @@
               <img src="assets/img/track-ocean.jpg" alt="Ocean Deep">
             </div>
             <div class="track-card__info">
-              <div class="track-card__title">No se va</div>
-              <div class="track-card__artist">Morat</div>
+              <div class="track-card__title">Ocean Deep</div>
+              <div class="track-card__artist">Aria Blue</div>
               <button class="track-card__price">$1.29</button>
             </div>
           </a>
@@ -165,24 +185,44 @@
               <img src="assets/img/track-firefly.jpg" alt="Firefly">
             </div>
             <div class="track-card__info">
-              <div class="track-card__title">Amor con hielo</div>
-              <div class="track-card__artist">Morat</div>
+              <div class="track-card__title">Firefly</div>
+              <div class="track-card__artist">The Night Owls</div>
               <button class="track-card__price">$0.99</button>
             </div>
           </a>
+
           <a href="#" class="track-card">
             <div class="track-card__cover cover--rush">
               <img src="assets/img/track-rush.jpg" alt="Rush Hour">
             </div>
             <div class="track-card__info">
-              <div class="track-card__title">Aprender a querete</div>
-              <div class="track-card__artist">Morat</div>
+              <div class="track-card__title">Rush Hour</div>
+              <div class="track-card__artist">Urban Groove</div>
               <button class="track-card__price">$1.29</button>
             </div>
           </a>
         </div>
       </section>
+
     </main>
   </div>
+
+<script>
+  const btn = document.getElementById('hamburgerBtn');
+  const menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', () => menu.classList.toggle('open'));
+</script>
+<script>
+  const btn = document.getElementById('hamburgerBtn');
+  const menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('mobile-menu--open');
+  });
+</script>
+<script>
+  const btn = document.getElementById('hamburgerBtn');
+  const menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', () => menu.classList.toggle('open'));
+</script>
 </body>
 </html>

@@ -65,3 +65,18 @@
   .player-mini-vol     { display: none; }
   .player-sidebar      { display: none; }
 }
+
+/* Bottom bar responsive */
+@media (max-width: 768px) {
+  .player-bottom-bar {
+    padding: 0 12px;
+    height: 60px;
+  }
+  .player-mini-vol { display: none; }
+  .player-mini-controls { gap: 12px; }
+  .player-mini-info { gap: 8px; }
+  .player-mini-title { font-size: 12px; }
+  .player-mini-artist { font-size: 10px; }
+  .player-sidebar { display: none; }
+  .player-bottom-progress { bottom: 60px; }
+}
