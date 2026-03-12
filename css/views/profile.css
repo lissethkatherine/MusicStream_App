@@ -1,0 +1,27 @@
+/* ===== HEADER ===== */
+.site-header {
+    position: fixed; top: 0; left: 0; right: 0;
+    height: 60px;
+    background: #0d1117;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    display: flex; align-items: center;
+    padding: 0 24px;
+    gap: 32px;
+    z-index: 100;
+  }
+  .site-header--centered { justify-content: space-between; }
+  .site-header--left     { gap: 32px; }
+
+
+.album-detail-left { 
+  position: sticky;
+  top: calc(600px + 32px); }
+.album-cover-large { 
+  width: 10%;
+  aspect-ratio: 1;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+.album-cover-large img { width: 100%; height: 100%; object-fit: cover; }
+
